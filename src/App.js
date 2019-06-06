@@ -28,7 +28,15 @@ function App() {
       
       {/* Render ra theo props  */}
       <Counter>
-        {({count}) => <h1>{count}</h1>}
+      {({count}) => 
+        <div>
+          <h1>{count}</h1>
+          <h2>{count}</h2>
+          <h3>{count}</h3>
+          <h4>{count}</h4>
+          <h5>{count}</h5>
+        </div>
+      }
       </Counter>
     </div>
   );
