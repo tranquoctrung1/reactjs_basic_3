@@ -7,7 +7,7 @@ class ImageComponent extends Component {
         const {url} = this.props;
         return (
             <img className="mainimg" src={url} alt="img nature">
-            </img>
+            </img>  
         )
     }
 }
