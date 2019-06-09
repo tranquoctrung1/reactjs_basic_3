@@ -8,6 +8,7 @@ import List from './component/List';
 import Counter from './component/Counter';
 import DataContextProvider from './component/DataContextProvider';
 import DataContextConsumer from './component/DataContextConsumer';
+import Hook from './component/Hook';
 
 // Provider and Consumer
 import Context from './Context/Context';
@@ -30,12 +31,7 @@ function App() {
         {/* mặc dù không có props là url nhưng nó cũng sẽ tạo ra props là url(tạo trong component trả về )  */}
         <DemoHigherComponent url={url}></DemoHigherComponent>
         {/* Consumer */}
-        <DataContextConsumer>
-          {({number, updateNumber}) => 
-          <div>
-            <div>{number}</div>
-            <button onClick={updateNumber}>Update Number</button>
-          </div>}
+        <DataContextConsumer>         
         </DataContextConsumer>
 
         {/* Render ra theo props  */}
@@ -53,6 +49,7 @@ function App() {
           </div>
         }
         </Counter>
+        <Hook/>
       </div>
     </DataContextProvider>
   );

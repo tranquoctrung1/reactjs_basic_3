@@ -1,18 +1,21 @@
-import React , { Component } from 'react';
+import React , {useContext } from 'react';
 
 import Context from '../Context/Context';
 
-export default class extends Component {
-    render()
-    {
+export default function () {
+    const {number, updateNumber} = useContext(Context)
+
         return (
-            <Context.Consumer>
-               {({number, updateNumber}) => 
-                    <div>
-                        <div>{number}</div>
-                        <button onClick={updateNumber}>Update Number</button>
-                    </div>}
-            </Context.Consumer>
-        )
-    }
+            // <Context.Consumer>
+            //    {({number, updateNumber}) => 
+            //         <div>
+            //             <div>{number}</div>
+            //             <button onClick={updateNumber}>Update Number</button>
+            //         </div>}
+            // </Context.Consumer>
+                <div>
+                    <div>{number}</div>
+                    <button onClick={updateNumber}>Update Number</button>
+                </div>
+                )
 }
